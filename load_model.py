@@ -3,7 +3,7 @@ from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Loads from .env
+load_dotenv(dotenv_path=".env")  # Loads from .env
 
 
 def Tiny_llm():
