@@ -27,3 +27,4 @@ scikit-Learn
 
 chromadb
 tiktoken
+youtube-transcript-api
