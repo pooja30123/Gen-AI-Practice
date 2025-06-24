@@ -42,6 +42,18 @@ def Mistral_llm():
     return llm
 
 
+def Phi_2():
+    llm = ChatOpenAI(
+        model="phi-2",
+        temperature=0.7,
+        openai_api_base=os.getenv("OPENAI_API_BASE"),
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        request_timeout=300,
+        max_retries=2
+    )
+    return llm
+
+
 def nomic_embedding():
     embedding_model = OpenAIEmbeddings(
         model="nomic-embed-text-v1.5",
