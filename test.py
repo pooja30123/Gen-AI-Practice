@@ -1,9 +1,9 @@
-from load_model import *
+# from load_model import *
 
-llm = Tiny_llm()
+# llm = Tiny_llm()
 
-response = llm.invoke("What is LangChain?")
-print(response.content)
+# response = llm.invoke("What is LangChain?")
+# print(response.content)
 
 
 
@@ -22,3 +22,18 @@ print(response.content)
 #     print("Available models:", response.json())
 # except Exception as e:
 #     print(f"Connection error: {e}")
+
+
+
+from dotenv import load_dotenv
+import os
+import google.generativeai as genai
+
+# Load variables from .env file
+load_dotenv()
+
+# Get the API key from environment
+api_key = os.getenv("GOOGLE_GENAI_API_KEY")
+
+# Configure Gemini
+genai.configure(api_key=api_key)
